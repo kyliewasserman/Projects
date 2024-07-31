@@ -21,7 +21,7 @@ Build a Middleware that utilizes OpenAI’s API to assist scholars in writing ac
 
 ### How to Use
 
-Go to [freeagora.org](freeagora.org), create/login to an account.
+Go to [freeagora.org](https://freeagora.org/), create/login to an account.
 
 You can find Agnus in the bottom right corner of individual workspaces. The Agnus icon is a dark gray circle with a robot image. 
 
