@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8jhhcogehv6n"]
+
+[ext_resource type="Script" path="res://endgame.gd" id="1_pkqji"]
+[ext_resource type="FontFile" uid="uid://c1hd2ilrmny4" path="res://Tiny Swords (Update 010)/Pixellari.ttf" id="2_yj1g0"]
+[ext_resource type="PackedScene" uid="uid://di8dbidna3n73" path="res://background.tscn" id="3_k4wss"]
+[ext_resource type="AudioStream" uid="uid://cln1u4criadvw" path="res://Tiny Swords (Update 010)/Peritune_Bewitched_Forest-chosic.com_.mp3" id="4_plv2g"]
+
+[node name="Endgame" type="Node2D"]
+script = ExtResource("1_pkqji")
+
+[node name="main" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 192.0
+offset_right = 670.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("2_yj1g0")
+theme_override_font_sizes/font_size = 20
+text = "Back to MAIN MENU"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 344.0
+offset_right = 670.0
+offset_bottom = 462.0
+theme_override_fonts/font = ExtResource("2_yj1g0")
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 388.0
+offset_top = 123.0
+offset_right = 742.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_yj1g0")
+theme_override_font_sizes/font_size = 50
+text = "Ready to QUIT?"
+
+[node name="Credits" type="Label" parent="."]
+offset_left = 733.0
+offset_top = 489.0
+offset_right = 1378.0
+offset_bottom = 660.0
+theme_override_fonts/font = ExtResource("2_yj1g0")
+theme_override_font_sizes/font_size = 20
+text = "Game Developer: Kylie Wasserman
+Asset Pack: Tiny Swords by Pixel Frog
+Audio: Bewitched Forest by PeriTune
+Font: Pixellari by Zacchary Dempsey-Plante
+        Starz by imagex
+        Intellecta Crowns by Intellecta Design"
+
+[node name="background" parent="." instance=ExtResource("3_k4wss")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_plv2g")
+autoplay = true
+
+[connection signal="pressed" from="main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

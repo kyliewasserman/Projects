@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://5qapvub1ij4j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_bha28"]
+[ext_resource type="PackedScene" uid="uid://di8dbidna3n73" path="res://background.tscn" id="2_6pe41"]
+[ext_resource type="FontFile" uid="uid://c1hd2ilrmny4" path="res://Tiny Swords (Update 010)/Pixellari.ttf" id="2_hft61"]
+[ext_resource type="AudioStream" uid="uid://cln1u4criadvw" path="res://Tiny Swords (Update 010)/Peritune_Bewitched_Forest-chosic.com_.mp3" id="4_68188"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_bha28")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 199.0
+offset_right = 670.0
+offset_bottom = 317.0
+theme_override_fonts/font = ExtResource("2_hft61")
+theme_override_font_sizes/font_size = 20
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 457.0
+offset_top = 360.0
+offset_right = 667.0
+offset_bottom = 478.0
+theme_override_fonts/font = ExtResource("2_hft61")
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 348.0
+offset_top = 128.0
+offset_right = 778.0
+offset_bottom = 179.0
+theme_override_fonts/font = ExtResource("2_hft61")
+theme_override_font_sizes/font_size = 50
+text = "The Mighty Knights"
+
+[node name="background" parent="." instance=ExtResource("2_6pe41")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_68188")
+autoplay = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
