@@ -6,7 +6,7 @@
 
  
 
-[linkedin.com/in/kyliewasserman](http://www.linkedin.com/in/kyliewasserman) | [github.com/kyliewasserman/Projects](http://www.github.com/kyliewasserman/Projects) | 201-249-0359 | [KylieGWasserman@Gmail.com](mailto:KylieGWasserman@Gmail.com)
+[linkedin.com/in/kyliewasserman](http://www.linkedin.com/in/kyliewasserman) | [github.com/kyliewasserman/Projects](http://www.github.com/kyliewasserman/Projects) | [KylieGWasserman@Gmail.com](mailto:KylieGWasserman@Gmail.com)
 
  
 
